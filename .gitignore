@@ -1,0 +1,4 @@
+public/bundle.*
+node_modules
+.cache
+dist
