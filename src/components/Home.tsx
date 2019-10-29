@@ -1,11 +1,14 @@
 
 import * as React from "react";
-import {jsx} from "@emotion/core";
+import  EmotionDemo from './EmotionDemo'
 
 function Home() {
 
   return (
-   <div>homer</div>
+   <div>
+       <div>Home</div>
+       <EmotionDemo />
+   </div>
   );
 }
 
