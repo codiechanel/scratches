@@ -55,37 +55,46 @@ export default function() {
       </div>
 
       {/*anothe*/}
-      <div>here we now use flex: 1</div>
-      <div>
-        notice that the box gets full height even though it doesnt have much
+      <div>here we now use flex: 1 and set the height to 100%</div>
+      <p>
+        Notice that the box gets full height even though it doesnt have much
         content
-      </div>
+      </p>
       <div>Children of flex parent automatically becomes flex</div>
       <div
         css={css`
-          display: flex;
-          flex-direction: row;
-          flex: 1;
+          min-height: 200px;
+          background-color: brown;
         `}
       >
         <div
           css={css`
-            background-color: magenta;
-            flex-basis: 50%;
+            display: flex;
+            flex-direction: row;
+            background-color: pink;
+            height: 100%;
+
+            flex: 1;
           `}
         >
-          flex-basis: 50%
-        </div>
-        <div
-          css={css`
-            flex-basis: 50%;
-            background-color: darkcyan;
-          `}
-        >
-          flex-basis: 50%
+          <div
+            css={css`
+              background-color: magenta;
+              flex-basis: 50%;
+            `}
+          >
+            flex-basis: 50%
+          </div>
+          <div
+            css={css`
+              flex-basis: 50%;
+              background-color: darkcyan;
+            `}
+          >
+            flex-basis: 50%
+          </div>
         </div>
       </div>
-
       {/*right align*/}
       <div>
         Here we set the third component to flex basis 100 so it would occupy the
@@ -162,6 +171,79 @@ export default function() {
           <Button size={"sm"}>welcome</Button>
         </div>
       </div>
+
+      <div>
+        here we use justify-content: flex-end; then flex basis 100 on the first
+      </div>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: row;
+          //align-items: flex-end;
+          justify-content: flex-end;
+          background-color: cadetblue;
+        `}
+      >
+        <div
+          css={css`
+            flex-basis: 100%;
+            //align-self: center;
+            //justify-self: center;
+            //text-align: right;
+            background-color: pink;
+          `}
+        >
+          box
+        </div>
+        <div>box</div>
+
+        <div>
+          <Button size={"sm"}>welcome</Button>
+        </div>
+      </div>
+
+      {/*align self*/}
+
+      <div
+        css={css`
+          display: flex;
+          flex-direction: row;
+          //align-items: flex-end;
+          //justify-content: flex-end;
+          min-height: 200px;
+          background-color: burlywood;
+        `}
+      >
+        <div
+          css={css`
+            align-self: flex-end;
+            background-color: brown;
+          `}
+        >
+          flex-end
+        </div>
+        <div
+          css={css`
+            align-self: center;
+            background-color: brown;
+          `}
+        >
+          center
+        </div>
+        <div
+          css={css`
+            align-self: stretch;
+
+            background-color: darkcyan;
+          `}
+        >
+          stretch
+        </div>
+      </div>
+
+      <p>Justify content have no effect.
+      Just remember, if you use row direction, you need to use align-self/align items</p>
+      <p>if you use column direction, then you can use justify-self</p>
     </Panel>
   );
 }
