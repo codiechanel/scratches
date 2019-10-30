@@ -87,6 +87,8 @@ export default function App() {
             <Link to="about">About</Link>
             <Link to="cool">cool</Link>
             <Link to="flexBasis">flexBasis</Link>
+              <Link to="spaceBetween">SpaceBetween</Link>
+
           </div>
         </LeftSection>
         <RightSection flex="2">
