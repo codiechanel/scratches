@@ -15,13 +15,19 @@ let Panel = styled.div`
   div {
     padding: 4px;
   }
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 `;
 export default function() {
   return (
     <Panel>
-      <div>Flex</div>
-      <div>Flex Basis</div>
-      <div>notice the second box is shorter </div>
+      <h1>Flex</h1>
+      <h2>Flex Basis</h2>
+      <p>Notice the second box is shorter </p>
       <div
         css={css`
           display: flex;
@@ -95,8 +101,7 @@ export default function() {
       >
         <div>box</div>
         <div>box</div>
-        <MyIcon
-          icon={"home"}
+        <div
           css={css`
             flex-basis: 100%;
             //align-self: flex-end;
@@ -104,7 +109,9 @@ export default function() {
             text-align: right;
             background-color: pink;
           `}
-        />
+        >
+          <MyIcon icon={"home"} />
+        </div>
       </div>
       <div>turns out text align right also works for buttons</div>
       <div
@@ -144,7 +151,7 @@ export default function() {
             flex-basis: 100%;
             //align-self: flex-end;
             //justify-self: flex-end;
-            //text-align: right;
+            text-align: right;
             background-color: pink;
           `}
         >
