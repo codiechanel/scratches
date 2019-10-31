@@ -1,9 +1,9 @@
-// import axios from '../../../../../projects/latest-workspace/node_modules/axios'
-import axios from 'axios'
+let obj  = { a: "cool"}
+let map = Object.entries(obj)
+// for (let mapKey in map) {
+//     console.log(map[mapKey])
+// }
+//
+// map.entries.forEach(x=>console.log(x))
 
-async function fetchGithub() {
-    let { data } = await axios.get('https://api.github.com/repos/octocat/Hello-World')
-    return data
-}
-
-fetchGithub().then(res=>console.log(res))
+map.map(x=>console.log(x))

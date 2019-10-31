@@ -88,6 +88,8 @@ export default function App() {
             <Link to="cool">cool</Link>
             <Link to="flexBasis">flexBasis</Link>
               <Link to="spaceBetween">SpaceBetween</Link>
+              <Link to="scratch">Scratch</Link>
+
 
           </div>
         </LeftSection>

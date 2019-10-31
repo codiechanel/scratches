@@ -5,6 +5,7 @@ import { Link, Router } from "@reach/router";
 import FlexBasis from "./FlexBasis";
 import SpaceBetween from "./SpaceBetween";
 import { css, jsx, Global, ClassNames } from "@emotion/core";
+import Scratch from "./Scratch";
 type ButtonProp = {
   primary?: string;
   flexDirection: string;
@@ -46,6 +47,7 @@ export default function() {
           <About path="about" />
           <FlexBasis path="flexBasis" />
           <SpaceBetween path="spaceBetween" />
+          <Scratch path="scratch" />
         </Router>
       </Panel>
 
